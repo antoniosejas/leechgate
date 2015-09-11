@@ -8,8 +8,8 @@ $leechgate_config = array(
     //it hardcode the destination
     'redirect_url'  => 'cdn.mapper-mobile.com/apk/mapper-test.apk',
     // name of event
-    'product' => 'apk downloaded',
-    'product_version' => $_SERVER['REMOTE_ADDR']
+    'product' => 'apk downloaded'
+    // 'product_version' => $_SERVER['REMOTE_ADDR']
 );
 
 ?>
