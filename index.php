@@ -108,7 +108,7 @@ function leechgate_track_ga($config) {
 			$visitor->fromUtma($config['utma_cookie']);
 		}
 		$session = new GoogleAnalytics\Session();
-		$event = new GoogleAnalytics\Event($config['normalized_host'], $config['product'], $config['product_version']);
+		$event = new GoogleAnalytics\Event($config['redirect_url'], $config['product'], $config['product_version']);
 		$event->setNoninteraction(true);
 
 		// track it!
