@@ -5,9 +5,9 @@ $leechgate_config = array(
     //
     'target'  => '',//empty for total redirection with query
     'host'  => 'cdn.mapper-mobile.com',
-    //
-    'redirect_url'  => 'cdn.mapper-mobile.com/apk/mapper-test.apk',//it hardcode the destination
-    // 
+    //it hardcode the destination
+    'redirect_url'  => 'cdn.mapper-mobile.com/apk/mapper-test.apk',
+    // name of event
     'product' => 'apk downloaded'
 );
 
