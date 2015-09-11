@@ -59,10 +59,14 @@ function leechgate_expand_config(&$config) {
 		if ($subparts[0]=="downloads") {
 			array_push($subparts, 2); // HACK: for downloads use target=2
 		} else {
+			if(''!=$config["target"]){
+
+			}
 			array_push($subparts, $config["target"]);
 		}
-
-		$parts[0] = implode("-", $subparts);
+		if(''!=$config["target"]){
+			$parts[0] = implode("-", $subparts);
+		}
 		$config['redirect_url'] = implode(".", $parts) . $config["query"];
 	}
 
