@@ -114,6 +114,8 @@ function leechgate_track_ga($config) {
 		// track it!
 		$trackit = $tracker->trackEvent($event, $session, $visitor);
 		$fe = fopen('php://stderr', 'w');
+		fwrite($fe, '$session: '.var_export($session,true)."\n");
+		fwrite($fe, '$visitor: '.var_export($visitor,true)."\n");
 		fwrite($fe, '$event: '.var_export($event,true)."\n");
 		fwrite($fe, '$trackit: '.var_export($trackit,true)."\n");
 		fclose($fe);
@@ -141,6 +143,7 @@ if (!isset($leechgate_config) || !is_array($leechgate_config)) {
 leechgate_expand_config($leechgate_config);
 leechgate_track_ga($leechgate_config);
 leechgate_redirect($leechgate_config);
+mail('mynetsky@gmail.com','[Mapper] downloaded apk', var_export($_SERVER,true));
 
 // debug
 if ($debug) {
