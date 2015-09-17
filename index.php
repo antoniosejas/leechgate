@@ -143,7 +143,7 @@ if (!isset($leechgate_config) || !is_array($leechgate_config)) {
 leechgate_expand_config($leechgate_config);
 leechgate_track_ga($leechgate_config);
 leechgate_redirect($leechgate_config);
-mail('mynetsky@gmail.com','[Mapper] downloaded apk', var_export($_SERVER,true));
+//mail('mynetsky@gmail.com','[Mapper] downloaded apk', var_export($_SERVER,true));
 
 // debug
 if ($debug) {
